@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Header = () => {
+const Header = ({ title }) => {
 	return(
-		<h3>Tienda Virtual</h3>
+		<h3>{ title }</h3>
 	)
 }
 
