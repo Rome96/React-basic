@@ -4,6 +4,7 @@ import Footer from './components/Footer'
 import Product from './components/Product'
 
 function App() {
+
   const [products, setProducts] = useState([
     { id: 1, name: 'Camisa React', price: 50 },
     { id: 2, name: 'Camisa Angular', price: 40 },
@@ -11,6 +12,9 @@ function App() {
     { id: 4, name: 'Camisa Vue', price: 80 },
     { id: 5, name: 'Camisa Jet', price: 90 }
   ])
+
+  const [productShop, setProductShop] = useState([])
+
   const date = new Date().getFullYear()
   return (
     <Fragment>
@@ -23,6 +27,9 @@ function App() {
           <Product
             key={product.id}
             product={product}
+            products={products}
+            productShop={productShop}
+            setProductShop={setProductShop}
           />
         ))
       }
