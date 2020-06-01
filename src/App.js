@@ -35,8 +35,8 @@ function App() {
         ))
       }
       <ShoppingCart
-            productShoppingcart={productShoppingcart}
-            setProductShoppingcart={setProductShoppingcart}
+        productShoppingcart={productShoppingcart}
+        setProductShoppingcart={setProductShoppingcart}
       />
       <Footer
         date={date}
