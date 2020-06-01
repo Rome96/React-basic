@@ -2,6 +2,7 @@ import React, { Fragment, useState } from 'react';
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Product from './components/Product'
+import ShoppingCart from './components/ShoppingCart'
 
 function App() {
 
@@ -13,7 +14,7 @@ function App() {
     { id: 5, name: 'Camisa Jet', price: 90 }
   ])
 
-  const [productShop, setProductShop] = useState([])
+  const [productShoppingcart, setProductShoppingcart] = useState([])
 
   const date = new Date().getFullYear()
   return (
@@ -28,11 +29,15 @@ function App() {
             key={product.id}
             product={product}
             products={products}
-            productShop={productShop}
-            setProductShop={setProductShop}
+            productShoppingcart={productShoppingcart}
+            setProductShoppingcart={setProductShoppingcart}
           />
         ))
       }
+      <ShoppingCart
+            productShoppingcart={productShoppingcart}
+            setProductShoppingcart={setProductShoppingcart}
+      />
       <Footer
         date={date}
       />
